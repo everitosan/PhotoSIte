@@ -1,0 +1,70 @@
+.Menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+}
+
+.Menu .menu_trigger {
+  display: none;
+  cursor: pointer;
+}
+
+.Menu .closeMenu {
+  background-image: url('../../img/close button.png');
+  background-size: 100% 100%;
+  position: absolute;
+  cursor: pointer;
+  display: none;
+  right: 1em;
+  top: 1em;
+  height: 24px;
+  width: 24px;
+}
+
+.Menu ul {
+  color: white;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.Menu ul li{
+  list-style: none;
+  margin: 0.5em 1em;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .Menu .menu_trigger {
+    display: block;
+  }
+
+  .Menu ul {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    flex-direction: column;    
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
+
+  .Menu ul.show,
+  .Menu .closeMenu {
+    display: block;
+  }
+}
+
+
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+  .Menu .closeMenu {
+    background-image: url('../../img/close button@2x.png');
+  }
+}
