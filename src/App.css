@@ -10,8 +10,9 @@
 }
 
 .App-header {
-  padding: 20px;
   color: white;
+  position: relative;
+  z-index: 1;
 }
 
 
@@ -19,5 +20,12 @@
 (min-resolution: 192dpi) {
   .logo {
     background-image: url('./img/logo@2x.png');
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .logo {
+    height: 62px;
+    width: 62px;
   }
 }

@@ -1,0 +1,43 @@
+.Gallery {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.Gallery .slider {
+  display: flex;
+  height: 100vh;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.Gallery .slider .items {
+  white-space: nowrap;
+  font-size: 0;
+  line-height: 0;
+}
+
+.Gallery .slider .ImageGallery{
+  display: inline-block;
+}
+
+.Gallery .slider-ctrl {
+  background: rgba(0,0,0,0.4);
+  border-radius: 50%;
+  color: #FFF;
+  cursor: pointer;
+  font-size: 2em;
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+}
+
+.Gallery #right-ctrl {
+    right: 1em;
+}
+
+.Gallery #left-ctrl {
+  left: 1em;
+}
