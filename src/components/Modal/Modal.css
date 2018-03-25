@@ -1,0 +1,61 @@
+.ModalContainer {
+  position: absolute;
+  left: 0;
+  height: 90%;
+  overflow: scroll;
+  top: 100px;
+  width: 100%;
+  padding: 20px 0;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.ModalContainer.hide {
+  display: none;
+}
+
+.ModalContainer .ModalBody {
+  background: linear-gradient(to bottom right, rgba(37, 42, 48, 0.95), #000);
+  box-shadow: 7px 6px 9px rgba(0, 0, 0, .5),
+              -7px 6px 9px rgba(0, 0, 0, .5);
+  box-sizing: border-box;
+  color: white;
+  margin: 0 auto;
+  padding: 100px 80px;
+  position: relative;
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
+  overflow: scroll;
+}
+
+.ModalContainer .closeModal {
+  background-image: url('../../img/close button.png');
+  background-size: 100% 100%;
+  cursor: pointer;
+  height: 24px;
+  position: absolute;
+  right: 1.3em;
+  top: 1.3em;
+  width: 24px;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+  .ModalContainer .closeModal {
+    background-image: url('../../img/close button@2x.png');
+  }
+}
+
+@media screen and (max-width: 600px)  {
+  .ModalContainer {
+    top: 70px;
+  }
+}
+
+
+@media screen and (max-width: 400px)  {
+  .ModalContainer .ModalBody {
+    padding: 100px 50px;
+  }
+}

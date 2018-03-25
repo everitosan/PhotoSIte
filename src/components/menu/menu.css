@@ -1,8 +1,7 @@
 .Menu {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 1em;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 100%;
 }
 
 .Menu .menu_trigger {
@@ -23,10 +22,12 @@
 }
 
 .Menu ul {
+  align-items: center;
   color: white;
   display: flex;
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 .Menu ul li{
@@ -40,9 +41,16 @@
     display: block;
   }
 
+  .Menu .menuMobile {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 1em;
+  }
+
   .Menu ul {
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.9);
     display: none;
     flex-direction: column;    
     height: 100%;
@@ -57,7 +65,7 @@
 
   .Menu ul.show,
   .Menu .closeMenu {
-    display: block;
+    display: flex;
   }
 }
 

@@ -1,0 +1,80 @@
+.Contact {
+  display: flex;
+}
+
+.Contact .title {
+  color: #EA771D;
+  font-weight: 500;
+  margin-top: 0;
+}
+
+.Contact p {
+  font-weight: normal;
+}
+
+.Contact .column {
+  flex: 1;
+  padding: 0 1em;
+  box-sizing: border-box;
+}
+
+.Contact .evesanInfo {
+  text-align: center;
+}
+
+.Contact .evesanInfo img {
+  width: 130px;
+  height: 130px;
+}
+
+.Contact .evesanInfo .conactInfoRow {
+  font-size: 16px;
+  margin: 20px 0;
+  font-weight: 100;
+}
+
+.Contact .evesanInfo .conactInfoRow span {
+  position: relative;
+  top: 2px;
+  right: 10px;
+}
+
+.Contact input[type="text"],
+.Contact input[type="email"] {
+  border: 1px solid #121921;
+  background-color: #D8D8D8;
+  box-sizing: border-box;
+  display: block;
+  font-size: 17px;
+  font-family: 'Gill Sans Std';
+  margin: 15px 0;
+  padding:10px;
+  width: 100%;
+}
+
+.Contact input[type="submit"] {
+  background-color: #EA771D;
+  border: none;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 200;
+  padding: 10px 50px;
+}
+
+.Contact form .buttons {
+  text-align: right;
+}
+
+@media screen and (max-width: 768px) {
+  .Contact {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 480px)  {
+  .Contact .column {
+    padding: 0;
+  }
+}

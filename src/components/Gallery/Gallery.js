@@ -1,8 +1,8 @@
-import React, {Component} from 'react'
+import React, {PureComponent} from 'react'
 import './Gallery.css'
 import ImageGallery from '../ImageGallery/ImageGallery'
 
-class Gallery extends Component {
+class Gallery extends PureComponent {
   state = {
     translate: 0,
     index: 0,

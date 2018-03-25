@@ -4,6 +4,7 @@ body {
   padding: 0;
   font-family: 'Avenir Next', sans-serif;
   font-weight: normal;
+  overflow: hidden;
 }
 
 :root {
