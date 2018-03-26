@@ -3,7 +3,7 @@
 }
 
 .Contact .title {
-  color: #EA771D;
+  color: var(--accent-color);
   font-weight: 500;
   margin-top: 0;
 }
@@ -53,7 +53,7 @@
 }
 
 .Contact input[type="submit"] {
-  background-color: #EA771D;
+  background-color: var(--accent-color);
   border: none;
   box-sizing: border-box;
   color: white;

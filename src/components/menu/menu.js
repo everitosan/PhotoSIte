@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import { Link } from 'react-router-dom'
 import './menu.css'
 
 class Menu extends Component {
@@ -21,9 +22,9 @@ class Menu extends Component {
         </div>
         <ul className={ (this.state.showMenu? 'show': 'hide') }>
           <div className="closeMenu" onClick={this.toggleMenu} ></div>
-          <li onClick={this.props.aboutClick} >Acerca de</li>
-          <li onClick={this.props.galleryClick}>Galería</li>
-          <li onClick={this.props.contactClick}>Contácto</li>
+          <li onClick={this.toggleMenu}> <Link to="/about"> Acerca de </Link> </li>
+          <li>  Galería  </li>
+          <li onClick={this.toggleMenu}> <Link to="/contact"> Contácto </Link> </li>
 
         </ul>
       </nav>

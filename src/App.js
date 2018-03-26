@@ -1,9 +1,11 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from 'react'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import './App.css'
 import Menu from './components/menu/menu'
 import Social from './components/social/social'
 import Gallery from './components/Gallery/Gallery'
 import Contact from './components/Contact/Contact'
+import About from './components/About/About'
 
 class App extends Component {
   state = {
@@ -19,17 +21,21 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <Contact hide={this.state.hideModalContact} />
-        <header className="App-header">
-          <div className="logo" alt="logo" />
-          <Menu
-            contactClick = {this.showContact}
-          />
-        </header>
-        <Gallery/>
-        <Social/>
-      </div>
+      <Router>
+        <div className="App">
+          <header className="App-header">
+            <div className="logo" alt="logo" />
+            <Menu
+              contactClick = {this.showContact}
+              />
+          </header>
+          <Gallery/>
+          <Social/>
+
+          <Route path="/about" component={ About } />
+          <Route path="/contact" component={ Contact } />
+        </div>
+      </Router>
     );
   }
 }

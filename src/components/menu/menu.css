@@ -36,6 +36,13 @@
   cursor: pointer;
 }
 
+.Menu ul li a,
+.Menu ul li a:hover,
+.Menu ul li a:visited {
+  color:inherit;
+  text-decoration: none;
+}
+
 @media screen and (max-width: 600px) {
   .Menu .menu_trigger {
     display: block;
