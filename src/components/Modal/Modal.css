@@ -1,4 +1,6 @@
 .ModalContainer {
+  --line-width: 4px;
+
   position: absolute;
   left: 0;
   height: 90%;
@@ -8,12 +10,87 @@
   padding: 20px 0;
   box-sizing: border-box;
   z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .ModalContainer.hide {
   display: none;
 }
 
+
+
+
+
+
+
+
+
+/* BACKGROUND */
+.ModalContainer .ModalBody .background {
+  display: grid;
+  grid-template-columns: [line1] 10px [line2] var(--line-width) [line3] 19px [line4] 1fr [line5] 19px [line6] var(--line-width) [line7] 10px  ;
+  grid-template-rows: [row1] 10px [row2] var(--line-width) [row3] 19px [row4] 1fr [row5] 19px [row6] var(--line-width) [row7] 10px  ;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+.ModalContainer .ModalBody .background .bg {
+  background-color: var(--white-color);
+}
+
+.ModalContainer .ModalBody .background .bg.bg1 {
+  grid-column-start: line3;
+  grid-row-start: row2;
+}
+
+.ModalContainer .ModalBody .background .bg.bg2 {
+  grid-column-start: line2;
+  grid-row: row2 / span 2;
+}
+
+.ModalContainer .ModalBody .background .bg.bg3 {
+  grid-column-start: line5;
+  grid-row-start: row2;
+}
+
+.ModalContainer .ModalBody .background .bg.bg4 {
+  grid-column-start: line6;
+  grid-row: row2 / span 2;
+}
+
+.ModalContainer .ModalBody .background .bg.bg5 {
+  grid-column-start: line3;
+  grid-row-start: row6;
+}
+
+.ModalContainer .ModalBody .background .bg.bg6 {
+  grid-column-start: line2;
+  grid-row: row5 / span 2;
+}
+
+.ModalContainer .ModalBody .background .bg.bg7 {
+  grid-column-start: line5;
+  grid-row-start: row6;
+}
+
+.ModalContainer .ModalBody .background .bg.bg8 {
+  grid-column-start: line6;
+  grid-row: row5 / span 2;
+}
+
+
+
+
+
+
+
+/* CONTENT */
 .ModalContainer .ModalBody {
   background: linear-gradient(to bottom right, rgba(37, 42, 48, 0.95), #000);
   box-shadow: 7px 6px 9px rgba(0, 0, 0, .5),
@@ -27,6 +104,10 @@
   max-width: 1024px;
   margin: 0 auto;
   overflow: scroll;
+}
+.ModalContainer .ModalBody .modalContent {
+  position: relative;
+  z-index: 1;
 }
 
 .ModalContainer .closeModal {
