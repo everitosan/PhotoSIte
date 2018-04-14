@@ -32,8 +32,10 @@
 
 .Menu ul li{
   list-style: none;
-  margin: 0.5em 1em;
+  margin: 0.5em 0;
   cursor: pointer;
+  text-align: center;
+  min-width: 120px;
 }
 
 .Menu ul li a,
@@ -41,6 +43,34 @@
 .Menu ul li a:visited {
   color:inherit;
   text-decoration: none;
+}
+
+.Menu .galleryItem:hover {
+  position: relative;
+  top: 57px;
+}
+
+.Menu .galleryItem:hover > .galleryMenu {
+  display: flex;
+}
+
+.Menu .galleryMenu {
+  background: linear-gradient(to bottom right, rgba(37, 42, 48, 0.95), #000);
+  color: white;
+  flex-direction: column;
+  margin: 0 auto;
+  height: auto;
+  font-family: 'Avenir Next Ultra';
+  display: none;
+  position: relative;
+  top: 10px;
+}
+
+.Menu .galleryMenu li {
+  cursor: pointer;
+}
+.Menu .galleryMenu li:hover {
+  color: var(--accent-color)
 }
 
 @media screen and (max-width: 600px) {

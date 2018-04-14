@@ -1,11 +1,15 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import './App.css'
+import UrlHandler from './containers/UrlHandler'
 import Menu from './components/menu/menu'
 import Social from './components/social/social'
 import Gallery from './components/Gallery/Gallery'
 import Contact from './components/Contact/Contact'
 import About from './components/About/About'
+
+import {Provider} from 'react-redux'
+import store from './store'
 
 class App extends Component {
   state = {
@@ -21,21 +25,27 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
-        <div className="App">
-          <header className="App-header">
-            <div className="logo" alt="logo" />
-            <Menu
-              contactClick = {this.showContact}
-              />
-          </header>
-          <Gallery/>
-          <Social/>
+      <Provider store={store} >
+        <Router>
+          <UrlHandler>
+            <div className="App">
+              <header className="App-header">
+                <div className="logo" alt="logo" />
+                <Menu
+                  contactClick = {this.showContact}
+                  />
+              </header>
 
-          <Route path="/about" component={ About } />
-          <Route path="/contact" component={ Contact } />
-        </div>
-      </Router>
+              <Gallery />
+              <Route path="/about" component={ About } />
+              <Route path="/contact" component={ Contact } />
+
+              <Social/>
+            </div>
+          </UrlHandler>
+        </Router>
+      </Provider>
+
     );
   }
 }
