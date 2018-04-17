@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import './App.css'
 import UrlHandler from './containers/UrlHandler'
 import Menu from './components/menu/menu'
@@ -30,7 +30,7 @@ class App extends Component {
           <UrlHandler>
             <div className="App">
               <header className="App-header">
-                <div className="logo" alt="logo" />
+                <Link to="/"> <div className="logo" alt="logo" /> </Link>
                 <Menu
                   contactClick = {this.showContact}
                   />

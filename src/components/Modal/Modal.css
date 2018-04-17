@@ -128,15 +128,26 @@
   }
 }
 
-@media screen and (max-width: 600px)  {
-  .ModalContainer {
-    top: 70px;
+
+@media screen and (max-width: 769px) {
+  .ModalContainer  {
+    height: 80%;
+  }
+
+  .ModalContainer .ModalBody {
+    height: 100%;
+    overflow: hidden;
+    padding: 50px 50px;
+  }
+
+  .ModalContainer .ModalBody .modalContent {
+    height: 100%;
+    overflow: scroll;
   }
 }
 
-
-@media screen and (max-width: 400px)  {
-  .ModalContainer .ModalBody {
-    padding: 100px 50px;
+@media screen and (max-width: 600px)  {
+  .ModalContainer {
+    top: 70px;
   }
 }
