@@ -2,6 +2,7 @@ import {Component} from 'react'
 import {withRouter} from 'react-router-dom'
 import {connect} from 'react-redux'
 import GalleryPhotos from '../../mock.js'
+import {setPictures} from '../../Actions'
 
 class UrlHandler extends Component {
   constructor (props){
@@ -33,10 +34,7 @@ class UrlHandler extends Component {
   }
 
   setPictures (category) {
-    this.props.dispatch({
-      type: 'SET_PICTURES',
-      payload: GalleryPhotos[category]
-    })
+    this.props.dispatch(setPictures(GalleryPhotos[category]))
   }
 
   render () {
